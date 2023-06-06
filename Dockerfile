@@ -1,6 +1,6 @@
 FROM python:3.11.2
 
-WORKDIR /news/newsweb
+WORKDIR /app
 
 COPY requirements.txt requirements.txt
 
