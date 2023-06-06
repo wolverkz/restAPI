@@ -5,7 +5,7 @@ FROM python:3.8
 ENV PYTHONUNBUFFERED 1
 
 # Get the Real World example app
-RUN git clone https://github.com/gothinkster/django-realworld-example-app.git /drf_src
+RUN git clone https://github.com/wolverkz/restAPI.git /drf_src
 
 # Set the working directory to /drf
 # NOTE: all the directives that follow in the Dockerfile will be executed in
