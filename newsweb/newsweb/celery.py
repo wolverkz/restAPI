@@ -1,9 +1,8 @@
 from celery import Celery
 
-app = Celery('proj',
-             broker='amqp://',
-             backend='rpc://',
-             include=['proj.tasks'])
+app = Celery('newsweb',
+             broker='amqp://localhost',
+             include=['newsweb.tasks'])
 
 # Optional configuration, see the application user guide.
 app.conf.update(
