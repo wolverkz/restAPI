@@ -1,16 +1,12 @@
-from .celery import app
+from celery import shared_task
+from django.core.mail import send_mail
 
-
-@app.task
-def add(x, y):
-    return x + y
-
-
-@app.task
-def mul(x, y):
-    return x * y
-
-
-@app.task
-def xsum(numbers):
-    return sum(numbers)
+@shared_task()
+def send_newsletter_email():
+    send_mail(
+        'New newsletter created',
+        'Hey there, new newsletter is out!',
+        's.spatayev@gmail.com',
+        ['s.spatyaev@gmail.com'],
+        fail_silently=False
+    )
