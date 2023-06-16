@@ -1,4 +1,4 @@
-from newsweb.newsweb.tasks import send_newsletter_email
+from newsweb.tasks import send_newsletter_email
 from rest_framework import permissions, viewsets
 from .models import Newsletter, Article
 from .serializers import NewsletterSerializer, ArticleSerializer, UserSerializer
