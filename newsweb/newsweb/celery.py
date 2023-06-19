@@ -4,7 +4,7 @@ from celery import Celery
 
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'newsweb.settings')
 
-app = Celery('newsweb')
+app = Celery('newsweb', broker='amqp://172.17.0.2', include=['newsweb.tasks'])
 
 app.config_from_object('django.conf:settings', namespace='CELERY')
 
