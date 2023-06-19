@@ -9,6 +9,6 @@ def send_newsletter_email():
         'New newsletter created',
         'Hey there, new newsletter is out!',
         's.spatayev@gmail.com',
-        ['s.spatyaev@gmail.com'],
+        ['s.spatayev@gmail.com'],
         fail_silently=False
     )
