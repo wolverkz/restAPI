@@ -1,13 +1,11 @@
+import os
 from celery import Celery
 
-app = Celery('newsweb',
-             broker='amqp://172.17.0.1',
-             include=['newsweb.tasks'])
 
-# Optional configuration, see the application user guide.
-app.conf.update(
-    result_expires=3600,
-)
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'newsweb.settings')
 
-if __name__ == '__main__':
-    app.start()
+app = Celery('newsweb')
+
+app.config_from_object('django.conf:settings', namespace='CELERY')
+
+app.autodiscover_tasks()
