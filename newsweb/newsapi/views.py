@@ -1,4 +1,4 @@
-from newsweb.tasks import send_newsletter_email
+from .tasks import send_newsletter_email
 from rest_framework import permissions, viewsets
 from .models import Newsletter, Article
 from .serializers import NewsletterSerializer, ArticleSerializer, UserSerializer
@@ -13,7 +13,6 @@ class NewsletterViewSet(viewsets.ModelViewSet):
 
     def perform_create(self, serializer):
         newsletter = serializer.save()
-
         send_newsletter_email.delay()
 
 
