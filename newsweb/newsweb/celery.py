@@ -1,7 +1,7 @@
 from celery import Celery
 
 app = Celery('newsweb',
-             broker='amqp://localhost',
+             broker='amqp://172.17.0.1',
              include=['newsweb.tasks'])
 
 # Optional configuration, see the application user guide.
