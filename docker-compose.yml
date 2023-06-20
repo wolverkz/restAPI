@@ -1,0 +1,28 @@
+version: '3'
+
+services:
+  db:
+    image: postgres
+  web:
+    build: .
+    command: python3 manage.py runserver 0.0.0.0:8000
+    volumes:
+      - .:/code
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
+      - rabbitmq
+  rabbitmq:
+    image: 'rabbitmq:3-management'
+    ports:
+      - '15672:15672'
+      - '5672:5672'
+  celery:
+    build: .
+    command: celery -A newsweb worker --loglevel=INFO
+    volumes:
+      - .:/code
+    depends_on:
+      - db
+      - rabbitmq
