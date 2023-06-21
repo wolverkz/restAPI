@@ -10,6 +10,8 @@ services:
       - "POSTGRES_DB=newsweb"
       - "POSTGRES_USER=postgres"
       - "POSTGRES_PASSWORD=Portal1911sp"
+    networks:
+      djangonetwork:
   web:
     build: .
     image: 'wolverkz/testapi'
@@ -21,11 +23,17 @@ services:
     depends_on:
       - db
       - rabbitmq
+    links:
+      - db:db
+    networks:
+      djangonetwork:
   rabbitmq:
     image: 'rabbitmq:3.11-management'
     ports:
       - '15672:15672'
       - '5675:5675'
+    networks:
+      djangonetwork:
   celery:
     build: .
     image: 'wolverkz/testapi'
@@ -35,6 +43,12 @@ services:
     depends_on:
       - db
       - rabbitmq
+    networks:
+      djangonetwork:
 
 volumes:
   postgres_data:
+
+networks:
+  djangonetwork:
+    driver: bridge
