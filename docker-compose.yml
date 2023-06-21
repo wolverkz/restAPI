@@ -2,9 +2,9 @@ version: '3'
 
 services:
   db:
-    image: postgres:13
+    image: postgres:15
     volumes:
-      - postgres_data:./var/lib/postgresql/data
+      - postgres_data:./var/lib/postgresql/data/
     environment:
       - "POSTGRES_HOST_AUTH_METHOD=trust"
   web:
