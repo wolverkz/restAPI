@@ -5,6 +5,7 @@ services:
     image: postgres
   web:
     build: .
+    image: 'wolverkz/testapi'
     command: python3 manage.py runserver 0.0.0.0:8000
     volumes:
       - .:/code
@@ -14,12 +15,13 @@ services:
       - db
       - rabbitmq
   rabbitmq:
-    image: 'rabbitmq:3-management'
+    image: 'rabbitmq:3.11-management'
     ports:
       - '15672:15672'
       - '5672:5672'
   celery:
     build: .
+    image: 'wolverkz/testapi'
     command: celery -A newsweb worker --loglevel=INFO
     volumes:
       - .:/code
