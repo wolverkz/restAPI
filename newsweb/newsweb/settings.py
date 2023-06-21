@@ -82,7 +82,7 @@ WSGI_APPLICATION = 'newsweb.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgres',
+        'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'newsweb',
         'USER': 'postgres',
         'PASSWORD': 'Portal1911sp',
