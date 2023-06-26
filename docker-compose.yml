@@ -2,7 +2,7 @@ version: '3'
 
 services:
   db:
-    image: postgres:14
+    image: postgres
     volumes:
       - postgres_data:/var/lib/postgresql/data/
     environment:
@@ -10,6 +10,8 @@ services:
       - POSTGRES_DB=newsweb
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=Portal1911sp
+    ports:
+      - "5432:5432"
     networks:
       djangonetwork:
   web:
