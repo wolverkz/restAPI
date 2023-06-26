@@ -2,13 +2,13 @@ version: '3'
 
 services:
   db:
-    image: postgres
+    image: postgres:14
     volumes:
       - postgres_data:/var/lib/postgresql/data/
     environment:
       - POSTGRES_HOST_AUTH_METHOD=trust
-      - POSTGRES_DB=newsweb
       - POSTGRES_USER=postgres
+      - POSTGRES_DB=newsweb
       - POSTGRES_PASSWORD=Portal1911sp
     ports:
       - "2345:2345"
