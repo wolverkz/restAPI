@@ -23,7 +23,7 @@ services:
     ports:
       - "8000:8000"
     depends_on:
-      - restapi_db
+      - db
       - rabbitmq
     links:
       - db:db
