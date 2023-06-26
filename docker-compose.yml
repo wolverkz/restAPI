@@ -11,7 +11,7 @@ services:
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=Portal1911sp
     ports:
-      - "5432:5432"
+      - "2345:2345"
     networks:
       djangonetwork:
   web:
