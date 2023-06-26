@@ -6,7 +6,6 @@ services:
     volumes:
       - postgres_data:/var/lib/postgresql/data/
     environment:
-      - POSTGRES_HOST_AUTH_METHOD=trust
       - POSTGRES_USER=postgres
       - POSTGRES_DB=newsweb
       - POSTGRES_PASSWORD=Portal1911sp
