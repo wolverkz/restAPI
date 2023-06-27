@@ -87,7 +87,7 @@ DATABASES = {
         'USER': 'postgres',
         'PASSWORD': 'Portal1911sp',
         'HOST': 'restapi_db_1',
-        'PORT': '2345',
+        'PORT': '5432',
     }
 }
 
