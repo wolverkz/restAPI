@@ -16,7 +16,7 @@ services:
   web:
     build: .
     image: 'wolverkz/testapi'
-    command: python3 manage.py runserver 0.0.0.0:8000
+    command: python3 newsweb/manage.py runserver 0.0.0.0:8000
     volumes:
       - .:/code
     ports:
@@ -24,21 +24,19 @@ services:
     depends_on:
       - db
       - rabbitmq
-    links:
-      - db:db
     networks:
       djangonetwork:
   rabbitmq:
     image: 'rabbitmq:3.11-management'
     ports:
       - '15672:15672'
-      - '5675:5675'
+      - '5672:5672'
     networks:
       djangonetwork:
   celery:
     build: .
     image: 'wolverkz/testapi'
-    command: celery -A newsweb worker --loglevel=INFO
+    command: celery -A newsweb.newsweb worker --loglevel=INFO
     volumes:
       - .:/code
     depends_on:
