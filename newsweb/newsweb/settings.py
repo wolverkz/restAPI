@@ -86,7 +86,7 @@ DATABASES = {
         'NAME': 'newsweb',
         'USER': 'postgres',
         'PASSWORD': 'Portal1911sp',
-        'HOST': 'restapi_db_1',
+        'HOST': 'db',
         'PORT': '5432',
     }
 }
