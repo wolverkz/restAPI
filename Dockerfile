@@ -6,8 +6,6 @@ WORKDIR /usr/src/app
 
 COPY requirements.txt requirements.txt
 
-COPY Dockerfile.celery .
-
 RUN pip install -r requirements.txt
 
 COPY . .
