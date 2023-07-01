@@ -16,16 +16,14 @@ services:
   web:
     build: ..
     image: 'wolverkz/testapi'
-    command: > 
-      bash -c "python manage.py runserver 0.0.0.0:8000
-      && python manage.py migrate"
+    command: bash -c "python manage.py runserver 0.0.0.0:800 && python manage.py migrate"
     volumes:
       - .:/usr/src/app/
     ports:
       - "8000:8000"
     environment:
-      - CELERY_BROKER=amqp://guest:guest@rabbitmq3:5672/
-      - CELERY_BACKEND=amqp://guest:guest@rabbitmq3:5672/
+      - CELERY_BROKER_URL=amqp://guest:guest@rabbitmq:5672/
+      - CELERY_RESULT_BACKEND=amqp://guest:guest@rabbitmq:5672/
     depends_on:
       - db
       - rabbitmq
@@ -45,8 +43,8 @@ services:
     volumes:
       - .:/usr/src/app
     environment:
-      - CELERY_BROKER=amqp://guest:guest@rabbitmq3:5672/
-      - CELERY_BACKEND=amqp://guest:guest@rabbitmq3:5672/
+      - CELERY_BROKER_URL=amqp://guest:guest@rabbitmq:5672/
+      - CELERY_RESULT_BACKEND=amqp://guest:guest@rabbitmq:5672/
     depends_on:
       - web
       - rabbitmq
