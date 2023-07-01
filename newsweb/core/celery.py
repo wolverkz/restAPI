@@ -5,8 +5,10 @@ from celery import Celery
 
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'core.settings')
 
-newsapi = Celery('core', broker='amqp://restapi-rabbitmq-1', include=['newsapp.tasks'])
+newsapi = Celery('core', broker='amqp://newsweb-rabbitmq-1', include=['newsapp.tasks'])
 
 newsapi.config_from_object('django.conf:settings', namespace='CELERY')
+
+newsapi.conf.broker_connection_retry_on_startup = True
 
 newsapi.autodiscover_tasks()
