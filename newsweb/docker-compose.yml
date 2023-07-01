@@ -14,9 +14,9 @@ services:
     networks:
       djangonetwork:
   web:
-    build: .
+    build: ..
     image: 'wolverkz/testapi'
-    command: python3 core/manage.py runserver 0.0.0.0:8000
+    command: python3 manage.py runserver 0.0.0.0:8000
     volumes:
       - .:/usr/src/app
     ports:
@@ -37,7 +37,7 @@ services:
     networks:
       djangonetwork:
   celery:
-    build: .
+    build: ..
     image: 'wolverkz/testapi'
     command: celery -A core worker --loglevel=INFO
     volumes:
