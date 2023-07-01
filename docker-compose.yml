@@ -7,7 +7,7 @@ services:
       - postgres_data:/var/lib/postgresql/data/
     environment:
       - POSTGRES_USER=postgres
-      - POSTGRES_DB=newsweb
+      - POSTGRES_DB=core
       - POSTGRES_PASSWORD=Portal1911sp
     ports:
       - "5432:5432"
@@ -16,11 +16,14 @@ services:
   web:
     build: .
     image: 'wolverkz/testapi'
-    command: python3 newsweb/manage.py runserver 0.0.0.0:8000
+    command: python3 core/manage.py runserver 0.0.0.0:8000
     volumes:
-      - .:/code
+      - .:/usr/src/app
     ports:
       - "8000:8000"
+    environment:
+      - CELERY_BROKER=amqp://guest:guest@rabbitmq3:5672/
+      - CELERY_BACKEND=amqp://guest:guest@rabbitmq3:5672/
     depends_on:
       - db
       - rabbitmq
@@ -36,9 +39,12 @@ services:
   celery:
     build: .
     image: 'wolverkz/testapi'
-    command: celery -A newsweb.newsweb worker --loglevel=INFO
+    command: celery -A core worker --loglevel=INFO
     volumes:
-      - .:/code
+      - .:/usr/src/app
+    environment:
+      - CELERY_BROKER=amqp://guest:guest@rabbitmq3:5672/
+      - CELERY_BACKEND=amqp://guest:guest@rabbitmq3:5672/
     depends_on:
       - web
       - rabbitmq

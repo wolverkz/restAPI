@@ -33,7 +33,7 @@ class Migration(migrations.Migration):
                 ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
                 ('title', models.CharField(max_length=150)),
                 ('content', models.TextField()),
-                ('newsletter', models.ForeignKey(default=1, on_delete=django.db.models.deletion.CASCADE, related_name='articles', to='newsapi.newsletter')),
+                ('newsletter', models.ForeignKey(default=1, on_delete=django.db.models.deletion.CASCADE, related_name='articles', to='newsapp.newsletter')),
                 ('owner', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='articles', to=settings.AUTH_USER_MODEL)),
             ],
         ),
