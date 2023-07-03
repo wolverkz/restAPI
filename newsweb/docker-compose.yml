@@ -16,7 +16,7 @@ services:
   web:
     build: ..
     image: 'wolverkz/testapi'
-    command: bash -c "python manage.py runserver 0.0.0.0:800 && python manage.py migrate"
+    command: bash -c "python manage.py runserver 0.0.0.0:8000 && python manage.py migrate"
     volumes:
       - .:/usr/src/app/
     ports:
