@@ -5,10 +5,6 @@ services:
     image: postgres:14
     volumes:
       - postgres_data:/var/lib/postgresql/data/
-    environment:
-      - POSTGRES_USER=postgres
-      - POSTGRES_DB=core
-      - POSTGRES_PASSWORD=Portal1911sp
     ports:
       - "5432:5432"
     networks:
