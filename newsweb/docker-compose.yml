@@ -11,7 +11,7 @@ services:
       djangonetwork:
   web:
     build: ..
-    image: 'wolverkz/newsweb:latest'
+    image: 'newsweb:latest'
     command: bash -c "python manage.py runserver 0.0.0.0:8000 && python manage.py migrate"
     volumes:
       - .:/usr/src/app/
@@ -34,7 +34,7 @@ services:
       djangonetwork:
   celery:
     build: ..
-    image: 'wolverkz/newsweb:latest'
+    image: 'newsweb:latest'
     command: celery -A core worker --loglevel=INFO
     volumes:
       - .:/usr/src/app
