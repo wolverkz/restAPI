@@ -12,7 +12,7 @@ services:
   web:
     build: ..
     image: 'wolverkz/newsweb:v1'
-    command: bash -c "python manage.py runserver 0.0.0.0:8000 && python manage.py migrate"
+    command: bash -c "python manage.py migrate && python manage.py runserver 0.0.0.0:8000
     volumes:
       - .:/usr/src/app/
     ports:
@@ -43,6 +43,7 @@ services:
       - CELERY_RESULT_BACKEND=rpc://
     depends_on:
       - web
+      - db
       - rabbitmq
     networks:
       djangonetwork:
