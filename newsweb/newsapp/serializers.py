@@ -7,7 +7,7 @@ class NewsletterSerializer(serializers.HyperlinkedModelSerializer):
 
     class Meta:
         model = Newsletter
-        fields = ['url', 'id', 'title', 'issue_number']
+        fields = ['url', 'id', 'title', 'issue_number', 'desc']
 
 
 class ArticleSerializer(serializers.HyperlinkedModelSerializer):
@@ -15,7 +15,7 @@ class ArticleSerializer(serializers.HyperlinkedModelSerializer):
 
     class Meta:
         model = Article
-        fields = ['url', 'id', 'owner', 'newsletter', 'title', 'content']
+        fields = ['url', 'id', 'owner', 'newsletter', 'title', 'content', 'image']
 
 
 class UserSerializer(serializers.ModelSerializer):
