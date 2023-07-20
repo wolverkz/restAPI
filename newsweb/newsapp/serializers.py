@@ -15,7 +15,7 @@ class ArticleSerializer(serializers.HyperlinkedModelSerializer):
 
     class Meta:
         model = Article
-        fields = ['url', 'id', 'owner', 'newsletter', 'title', 'content', 'image']
+        fields = ['url', 'id', 'owner', 'newsletter', 'title', 'content']
 
 
 class UserSerializer(serializers.ModelSerializer):

@@ -16,4 +16,3 @@ class Article(models.Model):
     content = models.TextField()
     owner = models.ForeignKey('auth.User', related_name='articles', on_delete=models.CASCADE)
     newsletter = models.ForeignKey('Newsletter', related_name='articles', on_delete=models.CASCADE, default=1)
-    image = models.ImageField()
