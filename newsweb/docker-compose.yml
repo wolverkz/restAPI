@@ -38,7 +38,7 @@ services:
       djangonetwork:
   celery:
     build: ..
-    image: 'wolverkz/newsweb:latest'
+    image: 'wolverkz/newsweb:v1'
     command: celery -A core worker --loglevel=INFO
     volumes:
       - .:/usr/src/app
