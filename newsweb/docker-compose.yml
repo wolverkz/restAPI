@@ -11,11 +11,6 @@ services:
       - "5432:5432"
     networks:
       djangonetwork:
-    healthcheck:
-      test: [ "CMD", "pg_isready", "-U", "postgres", "-d", "newsweb", "-h", "db" ]
-      interval: 5s
-      timeout: 10s
-      retries: 5
   web:
     build: ..
     image: 'wolverkz/newsweb:v1'
