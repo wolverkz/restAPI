@@ -35,6 +35,7 @@ To open the website, type `http://localhost:8000/`. If you run the website on yo
 
 Now you can log in as admin and create newsletters and articles.
 
+-----------------------
 To register a new user, open **Postman** and type this URL `http://192.168.107.195:8000/register/` and send a **POST** request. Then choose *Body, Raw, and JSON.* After that, use the following template to add a new user:
 ```json
 {
@@ -46,6 +47,7 @@ To register a new user, open **Postman** and type this URL `http://192.168.107.1
 
 Then, send **POST** request again.
 
+-----------------------
 To delete a user, open **Postman** and type this URL `http://192.168.107.195:8000/users/` and send a **GET** request. You should see the list of users in the terminal below. Choose the user you want to delete by clicking on the URL or by typing this URL `http://192.168.107.195:8000/users/user_pk/` (change the `user_pk` accordingly) and send a **DELETE** request.
 
 When you create a newsletter, an email will be sent to everyone who is registered and typed their correct email address.
