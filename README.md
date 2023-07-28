@@ -44,6 +44,8 @@ To register a new user, open **Postman** and type this URL `http://192.168.107.1
 }
 ```
 
+Then, send **POST** request again.
+
 To delete a user, open **Postman** and type this URL `http://192.168.107.195:8000/users/` and send a **GET** request. You should see the list of users in the terminal below. Choose the user you want to delete by clicking on the URL or by typing this URL `http://192.168.107.195:8000/users/user_pk/` (change the `user_pk` accordingly) and send a **DELETE** request.
 
 When you create a newsletter, an email will be sent to everyone who is registered and typed their correct email address.
