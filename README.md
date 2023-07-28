@@ -12,9 +12,9 @@ This website is a simple newsweb site where users can register, create newslette
 * [PostgreSQL](https://www.postgresql.org/): Open-source relational database management system.
 
 ## Requirements
-* [Docker](https://www.docker.com/)
-* [Docker Compose](https://docs.docker.com/compose/)
-* [Postman](https://www.postman.com/)
+* [Docker](https://www.docker.com/): Containerization platform for building, shipping, and running applications.
+* [Docker Compose](https://docs.docker.com/compose/): Tool for managing multi-container Docker applications.
+* [Postman](https://www.postman.com/): API development and testing collaboration platform.
 
 ## Installation and Setup
 1. Clone the repository: `git clone https://github.com/wolverkz/restAPI.git`
@@ -31,11 +31,11 @@ Now, website is up and running.
 
 
 ## Usage
-To open the website, type `http://localhost:8000/`. If you run the website on your VM, then instead of `localhost`, use the IP address of your VM.
+To open the website, type `http://localhost:8000/`. If you run the website on your **VM**, then instead of `localhost`, use the IP address of your VM.
 
 Now you can log in as admin and create newsletters and articles.
 
-To register a new user, open Postman and type this URL `http://192.168.107.195:8000/register/` and send a POST request. Then choose Body, Raw, and JSON. After that, use the following template to add a new user:
+To register a new user, open **Postman** and type this URL `http://192.168.107.195:8000/register/` and send a **POST** request. Then choose *Body, Raw, and JSON.* After that, use the following template to add a new user:
 ```
 {
     "username": "your_username",
@@ -44,7 +44,7 @@ To register a new user, open Postman and type this URL `http://192.168.107.195:8
 }
 ```
 
-To delete a user, open Postman and type this URL `http://192.168.107.195:8000/users/` and send a GET request. You should see the list of users in the terminal below. Choose the user you want to delete by clicking on the URL or by typing this URL `http://192.168.107.195:8000/users/user_pk/` (change the `user_pk` accordingly) and send a DELETE request.
+To delete a user, open **Postman** and type this URL `http://192.168.107.195:8000/users/` and send a **GET** request. You should see the list of users in the terminal below. Choose the user you want to delete by clicking on the URL or by typing this URL `http://192.168.107.195:8000/users/user_pk/` (change the `user_pk` accordingly) and send a **DELETE** request.
 
 When you create a newsletter, an email will be sent to everyone who is registered and typed their correct email address.
 
