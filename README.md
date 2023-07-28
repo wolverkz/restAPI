@@ -2,7 +2,6 @@
 Newsweb Django REST Framework API
 
 ## Overview
-<<<<<<< HEAD
 This website is a simple newsweb site where users can register, create newsletters with email notification, and articles.
 
 ## Built With
@@ -13,7 +12,6 @@ This website is a simple newsweb site where users can register, create newslette
 * [PostgreSQL](https://www.postgresql.org/): Open-source relational database management system.
 =======
 This website is a simple newsweb site where users can register, create newsletters with email notification, and articles
->>>>>>> origin/main
 
 ## Requirements
 - Docker
@@ -96,4 +94,3 @@ If you want to make changes inside the running container newsweb-web-1, you must
 * [Celery](https://docs.celeryproject.org/): An asynchronous task queue/job queue based on distributed message passing.
 * [RabbitMQ](https://www.rabbitmq.com/): A message broker that implements the Advanced Message Queuing Protocol (AMQP).
 * [PostgreSQL](https://www.postgresql.org/): Open-source relational database management system.
->>>>>>> origin/main
