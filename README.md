@@ -48,8 +48,8 @@ If you want to make changes inside the running container newsweb-web-1, you must
 "apt-get install nano". With nano, you can make changes inside the container. Example: nano docker-compose.yml
 
 ## Built With
-* Django: Python web framework.
-* Django REST Framework: Toolkit for building Web APIs in Django applications.
-* Celery: An asynchronous task queue/job queue based on distributed message passing.
-* RabbitMQ: A message broker that implements the Advanced Message Queuing Protocol (AMQP).
-* PostgreSQL: Open-source relational database management system.
+* [Django](https://www.djangoproject.com/): Python web framework.
+* [Django REST Framework](https://www.django-rest-framework.org/): Toolkit for building Web APIs in Django applications.
+* [Celery](https://docs.celeryproject.org/): An asynchronous task queue/job queue based on distributed message passing.
+* [RabbitMQ](https://www.rabbitmq.com/): A message broker that implements the Advanced Message Queuing Protocol (AMQP).
+* [PostgreSQL](https://www.postgresql.org/): Open-source relational database management system.
