@@ -36,7 +36,7 @@ To open the website, type `http://localhost:8000/`. If you run the website on yo
 Now you can log in as admin and create newsletters and articles.
 
 To register a new user, open **Postman** and type this URL `http://192.168.107.195:8000/register/` and send a **POST** request. Then choose *Body, Raw, and JSON.* After that, use the following template to add a new user:
-```
+```json
 {
     "username": "your_username",
     "email": "your_email",
