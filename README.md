@@ -17,14 +17,14 @@ This website is a simple newsweb site where users can register, create newslette
 - Postman
 
 ## Installation and Setup
-1. Clone the repository: '''git clone https://github.com/wolverkz/restAPI.git'''
-2. Change directory: '''cd restAPI/newsweb/'''
-3. Build and run the db container first: '''docker compose up -d db'''
-4. Build and run the remaining containers: '''docker compose up -d'''
-5. Run this command to get inside newsweb-web-1 container: '''docker exec -it newsweb-web-1 bash'''
-6. Create superuser: '''python manage.py createsuperuser'''
+1. Clone the repository: `git clone https://github.com/wolverkz/restAPI.git`
+2. Change directory: `cd restAPI/newsweb/`
+3. Build and run the db container first: `docker compose up -d db`
+4. Build and run the remaining containers: `docker compose up -d`
+5. Run this command to get inside newsweb-web-1 container: `docker exec -it newsweb-web-1 bash`
+6. Create superuser: `python manage.py createsuperuser`
 7. Type your username, email, and password.
-8. Run this command to load data from fixture: '''python manage.py loaddata fixture.json'''
+8. Run this command to load data from fixture: `python manage.py loaddata fixture.json`
 9. Exit the container by pressing CTRL + D
 
 Now, website is up and running.
