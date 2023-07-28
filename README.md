@@ -16,6 +16,11 @@ This website is a simple newsweb site where users can register, create newslette
 * [Docker Compose](https://docs.docker.com/compose/): Tool for managing multi-container Docker applications.
 * [Postman](https://www.postman.com/): API development and testing collaboration platform.
 
+## Tested Environment
+***This project has been tested and confirmed to work on an Ubuntu Server inside Virtual Machine (VM).***
+
+Please ensure you are using a similar environment for optimal compatibility.
+
 ## Installation and Setup
 1. Clone the repository: `git clone https://github.com/wolverkz/restAPI.git`
 2. Change directory: `cd restAPI/newsweb/`
