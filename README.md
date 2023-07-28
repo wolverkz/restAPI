@@ -12,9 +12,9 @@ This website is a simple newsweb site where users can register, create newslette
 * [PostgreSQL](https://www.postgresql.org/): Open-source relational database management system.
 
 ## Requirements
-- Docker
-- Docker Compose
-- Postman
+* [Docker](https://www.docker.com/)
+* [Docker Compose](https://docs.docker.com/compose/)
+* [Postman](https://www.postman.com/)
 
 ## Installation and Setup
 1. Clone the repository: `git clone https://github.com/wolverkz/restAPI.git`
