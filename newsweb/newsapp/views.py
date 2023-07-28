@@ -36,7 +36,6 @@ class UserViewSet(viewsets.ReadOnlyModelViewSet):
 
 
 @api_view(['POST'])
-@permission_classes([AllowAny])  # Allow any user (authenticated or not) to access this view
 def user_registration(request):
     if request.method == 'POST':
         serializer = UserRegistrationSerializer(data=request.data)
