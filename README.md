@@ -46,3 +46,10 @@ When you create a newsletter, an email will be sent to everyone who is registere
 If you run "docker compose up -d" first, website will not open. Simply stop all the containers and run them again.
 If you want to make changes inside the running container newsweb-web-1, you must type first "apt-get update" and then
 "apt-get install nano". With nano, you can make changes inside the container. Example: nano docker-compose.yml
+
+## Built With
+* [Django](https://www.djangoproject.com/): Python web framework.
+* [Django REST Framework](https://www.django-rest-framework.org/): Toolkit for building Web APIs in Django applications.
+* [Celery](https://docs.celeryproject.org/): An asynchronous task queue/job queue based on distributed message passing.
+* [RabbitMQ](https://www.rabbitmq.com/): A message broker that implements the Advanced Message Queuing Protocol (AMQP).
+* [PostgreSQL](https://www.postgresql.org/): Open-source relational database management system.
