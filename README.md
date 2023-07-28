@@ -1,5 +1,5 @@
-# Project Name
-Newsweb Django REST Framework API
+# Newsweb Django REST Framework API
+
 
 ## Overview
 This website is a simple newsweb site where users can register, create newsletters with email notification, and articles.
